@@ -2085,28 +2085,28 @@
                         PaddingBottom = dim(0, 5)
                     })
                     
-                    local toggle_button = library:create("TextButton", {
-                        Parent = left_components,
-                        Name = "",
-                        Text = "",
-                        Position = dim2(0, 0, 0, 2),
-                        BorderColor3 = rgb(0, 0, 0),
-                        Size = dim2(0, 8, 0, 10),
-                        BorderSizePixel = 0,
-                        BackgroundColor3 = rgb(2, 2, 2),
-                        LayoutOrder = -1,
-                        AutoButtonColor = false
-                    })
-                    
-                    local inline = library:create("Frame", {
-                        Parent = toggle_button,
-                        Name = "",
-                        Position = dim2(0, 1, 0, 1),
-                        BorderColor3 = rgb(0, 0, 0),
-                        Size = dim2(1, -2, 1, 2),
-                        BorderSizePixel = 0,
-                        BackgroundColor3 = rgb(63, 63, 63)
-                    })
+local toggle_button = library:create("TextButton", {
+    Parent = left_components,
+    Name = "",
+    Text = "",
+    Position = dim2(0, 0, 0, 2),
+    BorderColor3 = rgb(0, 0, 0),
+    Size = dim2(0, 16, 0, 20),
+    BorderSizePixel = 0,
+    BackgroundColor3 = rgb(2, 2, 2),
+    LayoutOrder = -1,
+    AutoButtonColor = false
+})
+
+local inline = library:create("Frame", {
+    Parent = toggle_button,
+    Name = "",
+    Position = dim2(0, 1, 0, 1),
+    BorderColor3 = rgb(0, 0, 0),
+    Size = dim2(1, -2, 1, -2),
+    BorderSizePixel = 0,
+    BackgroundColor3 = rgb(63, 63, 63)
+})
                     
                     library:create("UIGradient", {
                         Parent = inline,
