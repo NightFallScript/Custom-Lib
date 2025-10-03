@@ -575,6 +575,37 @@ local themes = {
                     BackgroundColor3 = rgb(255, 255, 255)
                 })
 
+    function library:addGlow(element, options)
+    options = options or {}
+
+    local glow = Instance.new("ImageLabel")
+    glow.Name = "UI_Glow"
+    glow.BackgroundTransparency = 1
+    glow.Image = "rbxassetid://5028857084" -- стандартний Roblox blur/glow
+    glow.ImageColor3 = options.Color or themes.preset.glow
+    glow.ImageTransparency = options.Transparency or 0.4
+    glow.ScaleType = Enum.ScaleType.Slice
+    glow.SliceCenter = Rect.new(24, 24, 276, 276)
+    glow.Size = UDim2.new(1, 40, 1, 40) -- трохи більший за сам елемент
+    glow.Position = UDim2.new(0, -20, 0, -20)
+    glow.ZIndex = (element.ZIndex or 1) - 1 -- glow позаду
+    glow.Parent = element
+
+    -- Тема
+    library:applyTheme(glow, "glow", "ImageColor3")
+
+    return glow
+end
+
+    local frame = library:create("Frame", {
+    Parent = coregui,
+    Size = UDim2.fromOffset(200, 100),
+    Position = UDim2.fromOffset(300, 300),
+    BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+})
+
+library:addGlow(frame, {Color = Color3.fromRGB(128, 0, 255), Transparency = 0.3})
+
                 local dragging_sat_val = library:create("Frame", {
                     Parent = background,
                     Name = "",
