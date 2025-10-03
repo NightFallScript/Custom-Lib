@@ -575,23 +575,23 @@ local themes = {
                     BackgroundColor3 = rgb(255, 255, 255)
                 })
 
-    function library:addGlow(element, options)
+function library:addGlow(element, options)
     options = options or {}
 
     local glow = Instance.new("ImageLabel")
     glow.Name = "UI_Glow"
     glow.BackgroundTransparency = 1
-    glow.Image = "rbxassetid://5028857084" -- стандартний Roblox blur/glow
+    glow.Image = "rbxassetid://7928096809"  -- твій White Glow asset
     glow.ImageColor3 = options.Color or themes.preset.glow
-    glow.ImageTransparency = options.Transparency or 0.4
+    glow.ImageTransparency = options.Transparency or 0.5
     glow.ScaleType = Enum.ScaleType.Slice
-    glow.SliceCenter = Rect.new(24, 24, 276, 276)
-    glow.Size = UDim2.new(1, 40, 1, 40) -- трохи більший за сам елемент
-    glow.Position = UDim2.new(0, -20, 0, -20)
-    glow.ZIndex = (element.ZIndex or 1) - 1 -- glow позаду
+    -- Значення SliceCenter можеш підігнати вручну, наприклад:
+    glow.SliceCenter = Rect.new(20, 20, 180, 180)
+    glow.Size = UDim2.new(1, 60, 1, 60)
+    glow.Position = UDim2.new(0, -30, 0, -30)
+    glow.ZIndex = (element.ZIndex or 1) - 1
     glow.Parent = element
 
-    -- Тема
     library:applyTheme(glow, "glow", "ImageColor3")
 
     return glow
