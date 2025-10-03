@@ -2091,7 +2091,7 @@ local toggle_button = library:create("TextButton", {
     Text = "",
     Position = dim2(0, 0, 0, 2),
     BorderColor3 = rgb(0, 0, 0),
-    Size = dim2(0, 14, 0, 14),
+    Size = dim2(0, 14, 0, 13),
     BorderSizePixel = 0,
     BackgroundColor3 = rgb(2, 2, 2),
     LayoutOrder = -1,
@@ -2103,7 +2103,7 @@ local inline = library:create("Frame", {
     Name = "",
     Position = dim2(0, 1, 0, 1),
     BorderColor3 = rgb(0, 0, 0),
-    Size = dim2(1, -2, 1, -2),
+    Size = dim2(1, 0, 1, -2),
     BorderSizePixel = 0,
     BackgroundColor3 = rgb(63, 63, 63)
 })
