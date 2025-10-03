@@ -2089,7 +2089,7 @@
                         Parent = left_components,
                         Name = "",
                         Text = "",
-                        Position = dim2(0, 0, 0, 2),
+                        Position = dim2(0, 0, 0, 0),
                         BorderColor3 = rgb(0, 0, 0),
                         Size = dim2(0, 11, 0, 11),
                         BorderSizePixel = 0,
