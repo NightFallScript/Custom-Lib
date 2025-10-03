@@ -2026,7 +2026,7 @@
                         BorderColor3 = rgb(0, 0, 0),
                         Text = "",
                         ZIndex = 2,
-                        Size = dim2(1, -8, 0, 12),
+                        Size = dim2(1, -8, 0, 26),
                         BorderSizePixel = 0,
                         BackgroundTransparency = 1,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -2041,7 +2041,7 @@
                         Name = "",
                         Position = dim2(1, 0, 0, -1),
                         BorderColor3 = rgb(0, 0, 0),
-                        Size = dim2(0, 0, 0, 12),
+                        Size = dim2(0, 0, 0, 26),
                         BorderSizePixel = 0,
                         BackgroundColor3 = rgb(255, 255, 255)
                     })
