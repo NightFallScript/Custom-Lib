@@ -2091,7 +2091,7 @@ local toggle_button = library:create("TextButton", {
     Text = "",
     Position = dim2(0, 0, 0, 2),
     BorderColor3 = rgb(0, 0, 0),
-    Size = dim2(0, 16, 0, 10),
+    Size = dim2(0, 14, 0, 14),
     BorderSizePixel = 0,
     BackgroundColor3 = rgb(2, 2, 2),
     LayoutOrder = -1,
@@ -2115,15 +2115,15 @@ local inline = library:create("Frame", {
                         Color = rgbseq{rgbkey(0, rgb(232, 232, 232)), rgbkey(1, rgb(162, 162, 162))}
                     })
                     
-                    local accent = library:create("Frame", {
-                        Parent = inline,
-                        Name = "",
-                        Visible = false,
-                        BorderColor3 = rgb(0, 0, 0),
-                        Size = dim2(1, 0, 1, 0),
-                        BorderSizePixel = 0,
-                        BackgroundColor3 = themes.preset.accent
-                    }); library:applyTheme(accent, "accent", "BackgroundColor3")
+local accent = library:create("Frame", {
+    Parent = inline,
+    Name = "",
+    Visible = false,
+    BorderColor3 = rgb(0, 0, 0),
+    Size = dim2(1, 0, 1, 0),
+    BorderSizePixel = 0,
+    BackgroundColor3 = themes.preset.accent
+}); library:applyTheme(accent, "accent", "BackgroundColor3")
                     
                     library:create("UIGradient", {
                         Parent = accent,
