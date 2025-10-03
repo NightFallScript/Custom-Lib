@@ -2091,7 +2091,7 @@
                         Text = "",
                         Position = dim2(0, 0, 0, 2),
                         BorderColor3 = rgb(0, 0, 0),
-                        Size = dim2(0, 8, 0, 8),
+                        Size = dim2(0, 14, 0, 14),
                         BorderSizePixel = 0,
                         BackgroundColor3 = rgb(2, 2, 2),
                         LayoutOrder = -1,
