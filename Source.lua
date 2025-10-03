@@ -1449,7 +1449,7 @@
     -- Library element functions
         function library:window(properties)
             local cfg = {
-                name = properties.name or properties.Name or os.date('<font color="rgb(170,85,235)">obelus</font> | %b %d %Y | %H:%M'),
+                name = properties.name or properties.Name or os.date('<font color="rgb(255,255,255)">NightFall</font> | %b %d %Y | %H:%M'),
                 size = properties.size or properties.Size or dim2(0, 516, 0, 563),
                 selected_tab, 
                 is_closing_menu = false,
@@ -2091,7 +2091,7 @@
                         Text = "",
                         Position = dim2(0, 0, 0, 2),
                         BorderColor3 = rgb(0, 0, 0),
-                        Size = dim2(0, 14, 0, 14),
+                        Size = dim2(0, 11, 0, 11),
                         BorderSizePixel = 0,
                         BackgroundColor3 = rgb(2, 2, 2),
                         LayoutOrder = -1,
