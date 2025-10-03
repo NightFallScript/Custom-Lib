@@ -2026,7 +2026,7 @@
                         BorderColor3 = rgb(0, 0, 0),
                         Text = "",
                         ZIndex = 2,
-                        Size = dim2(1, -8, 0, 26),
+                        Size = dim2(1, -8, 0, 12),
                         BorderSizePixel = 0,
                         BackgroundTransparency = 1,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -2041,7 +2041,7 @@
                         Name = "",
                         Position = dim2(1, 0, 0, -1),
                         BorderColor3 = rgb(0, 0, 0),
-                        Size = dim2(0, 0, 0, 26),
+                        Size = dim2(0, 0, 0, 12),
                         BorderSizePixel = 0,
                         BackgroundColor3 = rgb(255, 255, 255)
                     })
@@ -2067,7 +2067,7 @@
                         BackgroundTransparency = 1,
                         Position = dim2(0, 3, 0, 1),
                         BorderColor3 = rgb(0, 0, 0),
-                        Size = dim2(0, 0, 0, 26),
+                        Size = dim2(0, 0, 0, 14),
                         BorderSizePixel = 0,
                         BackgroundColor3 = rgb(255, 255, 255)
                     })
@@ -2085,28 +2085,28 @@
                         PaddingBottom = dim(0, 5)
                     })
                     
-local toggle_button = library:create("TextButton", {
-    Parent = left_components,
-    Name = "",
-    Text = "",
-    Position = dim2(0, 0, 0, 2),
-    BorderColor3 = rgb(0, 0, 0),
-    Size = dim2(0, 14, 0, 13),
-    BorderSizePixel = 0,
-    BackgroundColor3 = rgb(2, 2, 2),
-    LayoutOrder = -1,
-    AutoButtonColor = false
-})
-
-local inline = library:create("Frame", {
-    Parent = toggle_button,
-    Name = "",
-    Position = dim2(0, 1, 0, 1),
-    BorderColor3 = rgb(0, 0, 0),
-    Size = dim2(1, 0, 1, -2),
-    BorderSizePixel = 0,
-    BackgroundColor3 = rgb(63, 63, 63)
-})
+                    local toggle_button = library:create("TextButton", {
+                        Parent = left_components,
+                        Name = "",
+                        Text = "",
+                        Position = dim2(0, 0, 0, 2),
+                        BorderColor3 = rgb(0, 0, 0),
+                        Size = dim2(0, 8, 0, 8),
+                        BorderSizePixel = 0,
+                        BackgroundColor3 = rgb(2, 2, 2),
+                        LayoutOrder = -1,
+                        AutoButtonColor = false
+                    })
+                    
+                    local inline = library:create("Frame", {
+                        Parent = toggle_button,
+                        Name = "",
+                        Position = dim2(0, 1, 0, 1),
+                        BorderColor3 = rgb(0, 0, 0),
+                        Size = dim2(1, -2, 1, -2),
+                        BorderSizePixel = 0,
+                        BackgroundColor3 = rgb(63, 63, 63)
+                    })
                     
                     library:create("UIGradient", {
                         Parent = inline,
@@ -2115,15 +2115,15 @@ local inline = library:create("Frame", {
                         Color = rgbseq{rgbkey(0, rgb(232, 232, 232)), rgbkey(1, rgb(162, 162, 162))}
                     })
                     
-local accent = library:create("Frame", {
-    Parent = inline,
-    Name = "",
-    Visible = false,
-    BorderColor3 = rgb(0, 0, 0),
-    Size = dim2(1, 0, 1, 0),
-    BorderSizePixel = 0,
-    BackgroundColor3 = themes.preset.accent
-}); library:applyTheme(accent, "accent", "BackgroundColor3")
+                    local accent = library:create("Frame", {
+                        Parent = inline,
+                        Name = "",
+                        Visible = false,
+                        BorderColor3 = rgb(0, 0, 0),
+                        Size = dim2(1, 0, 1, 0),
+                        BorderSizePixel = 0,
+                        BackgroundColor3 = themes.preset.accent
+                    }); library:applyTheme(accent, "accent", "BackgroundColor3")
                     
                     library:create("UIGradient", {
                         Parent = accent,
@@ -2140,7 +2140,7 @@ local accent = library:create("Frame", {
                         BorderColor3 = rgb(0, 0, 0),
                         Text = cfg.name,
                         BackgroundTransparency = 1,
-                        Size = dim2(0, 0, 1, 2),
+                        Size = dim2(0, 0, 1, -1),
                         BorderSizePixel = 0,
                         AutomaticSize = Enum.AutomaticSize.X,
                         TextSize = 12,
