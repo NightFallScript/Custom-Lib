@@ -2091,7 +2091,7 @@
                         Text = "",
                         Position = dim2(0, 0, 0, 2),
                         BorderColor3 = rgb(0, 0, 0),
-                        Size = dim2(0, 8, 0, 8),
+                        Size = dim2(0, 8, 0, 10),
                         BorderSizePixel = 0,
                         BackgroundColor3 = rgb(2, 2, 2),
                         LayoutOrder = -1,
@@ -2103,7 +2103,7 @@
                         Name = "",
                         Position = dim2(0, 1, 0, 1),
                         BorderColor3 = rgb(0, 0, 0),
-                        Size = dim2(1, -2, 1, -2),
+                        Size = dim2(1, -2, 1, 2),
                         BorderSizePixel = 0,
                         BackgroundColor3 = rgb(63, 63, 63)
                     })
@@ -2140,7 +2140,7 @@
                         BorderColor3 = rgb(0, 0, 0),
                         Text = cfg.name,
                         BackgroundTransparency = 1,
-                        Size = dim2(0, 0, 1, -1),
+                        Size = dim2(0, 0, 1, 2),
                         BorderSizePixel = 0,
                         AutomaticSize = Enum.AutomaticSize.X,
                         TextSize = 12,
