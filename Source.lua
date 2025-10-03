@@ -64,7 +64,7 @@
     end 
 
     getgenv().library = {
-        directory = "obels",
+        directory = "NightFall",
         folders = {
             "/fonts",
             "/configs",
@@ -82,25 +82,24 @@
         gui; 
     }
 
-    local themes = {
-        preset = {
-            ["accent"] = hex("#AA55EB"),
-            -- ["glow"] = hex("#AA55EB"), -- ignore
-        }, 	
+local themes = {
+    preset = {
+        ["accent"] = hex("#ffffff"), -- фіолетовий
+        ["glow"] = hex("#ffffff"),   -- колір глоу
+    }, 	
 
-        utility = {
-            ["accent"] = {
-                ["BackgroundColor3"] = {}, 	
-                ["TextColor3"] = {}, 
-                ["ImageColor3"] = {}, 
-                ["ScrollBarImageColor3"] = {} 
-            },
-            -- UNCOMMENT THIS TO ADD GLOW TO YOUR UI (modify it yourself.)
-            -- ["glow"] = {
-            --     ["ImageColor3"] = {}, 	
-            -- }, 
+    utility = {
+        ["accent"] = {
+            ["BackgroundColor3"] = {}, 	
+            ["TextColor3"] = {}, 
+            ["ImageColor3"] = {}, 
+            ["ScrollBarImageColor3"] = {} 
+        },
+        ["glow"] = {
+            ["ImageColor3"] = {}, 	
         }, 
-    }
+    }, 
+}
 
     local keys = {
         [Enum.KeyCode.LeftShift] = "LS",
@@ -277,6 +276,42 @@
 
             return (y_cond and x_cond)
         end
+
+       function library:addGlow(element, options)
+            options = options or {}
+
+            local glow = Instance.new("ImageLabel")
+            glow.Name = "UI_Glow"
+            glow.BackgroundTransparency = 1
+            glow.Image = "rbxassetid://123067909677799"
+            glow.ImageColor3 = options.Color or themes.preset.glow
+            glow.ImageTransparency = options.Transparency or 0.4
+            glow.ScaleType = Enum.ScaleType.Slice
+            glow.SliceCenter = Rect.new(10,10,118,118)
+            glow.Size = UDim2.new(1, (options.SizeOffset or 30), 1, (options.SizeOffset or 30))
+            glow.Position = UDim2.new(0, -(options.SizeOffset or 15), 0, -(options.SizeOffset or 15))
+            glow.ZIndex = (element.ZIndex or 1) - 1
+            glow.Parent = element
+
+            -- Прив'язуємо до теми
+            library:applyTheme(glow, "glow", "ImageColor3")
+
+            return glow
+        end
+
+local mainFrame = Instance.new("Frame")
+mainFrame.Parent = coregui
+mainFrame.Size = UDim2.new(0, 300, 0, 200)
+mainFrame.Position = UDim2.new(0.5, -150, 0.5, -100)
+mainFrame.BackgroundColor3 = Color3.fromRGB(30,30,30)
+mainFrame.ZIndex = 10
+
+-- додаємо glow
+library:addGlow(mainFrame, {
+    Color = Color3.fromRGB(255,255,255),
+    Transparency = 0.3,
+    SizeOffset = 40
+})
 
         library.lerp = LPH_NO_VIRTUALIZE(function(start, finish, t)
             t = t or 1 / 8
