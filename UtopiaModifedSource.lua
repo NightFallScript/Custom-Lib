@@ -649,24 +649,6 @@ local Library do
                 Position = UDim2New(0, MouseLocation.X, 0, MouseLocation.Y - 22),
                 Visible = true,
             })
-
-            local Glow = Instances:create("ImageLabel", {
-						Parent = items.main_holder,
-						Name = "",
-						ImageColor3 = themes.preset.glow,
-						ScaleType = Enum.ScaleType.Slice,
-						BorderColor3 = rgb(0, 0, 0),
-						BackgroundColor3 = rgb(255, 255, 255),
-						Visible = true,
-						Image = "http://www.roblox.com/asset/?id=18245826428",
-						BackgroundTransparency = 1,
-						ImageTransparency = 0.8, 
-						Position = dim2(0, -20, 0, -20),
-						Size = dim2(1, 40, 1, 40),
-						ZIndex = 2,
-						BorderSizePixel = 0,
-						SliceCenter = rect(vec2(21, 21), vec2(79, 79))
-			}) 
               
             local TooltipText = Instances:Create("TextLabel", {
                 Parent = Tooltip.Instance,
