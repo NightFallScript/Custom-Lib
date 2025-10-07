@@ -21,7 +21,11 @@
         Side/side: number,
     )
 
-    function Page:Playerlist()
+    function Page:Playerlist()utility = {
+      ["glow"] = {
+				["ImageColor3"] = {}, 	
+			}, 
+  }
 
     function Section:Label(Data: table
         Name/name: string,
@@ -662,7 +666,7 @@ local Library do
 						ZIndex = 2,
 						BorderSizePixel = 0,
 						SliceCenter = rect(vec2(21, 21), vec2(79, 79))
-				    }) library:apply_theme(items.glow, "glow", "ImageColor3") 
+			}) 
               
             local TooltipText = Instances:Create("TextLabel", {
                 Parent = Tooltip.Instance,
