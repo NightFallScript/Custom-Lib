@@ -21,11 +21,7 @@
         Side/side: number,
     )
 
-    function Page:Playerlist()utility = {
-      ["glow"] = {
-				["ImageColor3"] = {}, 	
-			}, 
-  }
+    function Page:Playerlist()
 
     function Section:Label(Data: table
         Name/name: string,
@@ -225,6 +221,7 @@ local Library do
         CurrentFrames = { },
 
         ThemeColorpickers = { },
+
         SetFlags = { },
 
         CopiedColor = nil,
@@ -382,7 +379,7 @@ local Library do
             ["Accent"] = FromRGB(104, 214, 255)
         }
     }
-	
+
     Library.Theme = TableClone(Themes["Default"])
     Library.Themes = Themes
 
@@ -649,7 +646,7 @@ local Library do
                 Position = UDim2New(0, MouseLocation.X, 0, MouseLocation.Y - 22),
                 Visible = true,
             })
-              
+
             local TooltipText = Instances:Create("TextLabel", {
                 Parent = Tooltip.Instance,
                 BackgroundColor3 = FromRGB(0, 0, 0),
