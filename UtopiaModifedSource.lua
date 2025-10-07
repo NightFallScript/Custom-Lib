@@ -338,7 +338,6 @@ local Library do
             ["Dark Liner"] = FromRGB(56, 56, 56),
             ["Risky"] = FromRGB(255, 50, 50),
             ["Accent"] = FromRGB(31, 226, 130),
-            ["glow"] = hex("158, 79, 249")
         },
 
         ["Bitchbot"] = {
@@ -352,7 +351,6 @@ local Library do
             ["Dark Liner"] = FromRGB(21, 21, 21),
             ["Risky"] = FromRGB(255, 50, 50),
             ["Accent"] = FromRGB(158, 79, 249),
-            ["glow"] = hex("158, 79, 249")
         },
 
         ["Onetap"] = {
@@ -366,7 +364,6 @@ local Library do
             ["Dark Liner"] = FromRGB(22, 22, 20),
             ["Risky"] = FromRGB(255, 50, 50),
             ["Accent"] = FromRGB(237, 170, 0),
-            ["glow"] = hex("158, 79, 249")
         },
 
         ["Aqua"] = {
@@ -380,7 +377,6 @@ local Library do
             ["Dark Liner"] = FromRGB(38, 45, 53),
             ["Risky"] = FromRGB(255, 50, 50),
             ["Accent"] = FromRGB(104, 214, 255),
-            ["glow"] = hex("158, 79, 249")
         }
     }
 utility = {
