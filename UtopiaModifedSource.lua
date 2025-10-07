@@ -221,11 +221,6 @@ local Library do
         CurrentFrames = { },
 
         ThemeColorpickers = { },
-		utility = {
-      	["glow"] = {
-				["ImageColor3"] = {}, 	
-				}, 
- 		}
         SetFlags = { },
 
         CopiedColor = nil,
