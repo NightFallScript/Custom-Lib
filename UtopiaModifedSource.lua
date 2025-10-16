@@ -1807,12 +1807,7 @@ local Library do
                     LineJoinMode = Enum.LineJoinMode.Miter
                 }):AddToTheme({Color = "Outline"})
 
-                Instances:Create("UIGradient", {
-                    Parent = Items["Indicator"].Instance,
-                    Rotation = 90,
-                    Color = RGBSequence{RGBSequenceKeypoint(0, FromRGB(255, 255, 255)), RGBSequenceKeypoint(1, FromRGB(127, 127, 127))}
-                }) 
-
+				
                 Items["Text"] = Instances:Create("TextLabel", {
                     Parent = Items["Toggle"].Instance,
                     FontFace = Library.Font,
