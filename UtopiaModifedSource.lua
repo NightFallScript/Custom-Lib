@@ -193,10 +193,10 @@ local Library do
         },
 
         Folders = {
-            Directory = "testpath",
-            Configs = "testpath/Configs",
-            Assets = "testpath/Assets",
-            Themes = "testpath/Themes"
+            Directory = "NexusVision",
+            Configs = "NexusVision/Configs",
+            Assets = "NexusVision/Assets",
+            Themes = "NexusVision/Themes"
         },
 
         Images = { -- you're welcome to reupload the images and replace it with your own links
