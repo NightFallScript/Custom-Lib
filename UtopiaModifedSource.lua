@@ -336,8 +336,8 @@ local Library do
             ["Border"] = FromRGB(68, 68, 68),
             ["Outline"] = FromRGB(0, 0, 0),
             ["Dark Liner"] = FromRGB(56, 56, 56),
-            ["Risky"] = FromRGB(255, 50, 50),
-            ["Accent"] = FromRGB(31, 226, 130)
+            ["Risky"] = FromRGB(255, 213, 0),
+            ["Accent"] = FromRGB(209, 39, 27)
         },
 
         ["Bitchbot"] = {
